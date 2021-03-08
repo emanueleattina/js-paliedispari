@@ -3,23 +3,10 @@
 // il computer genera un random da 1 a 5
 // confrontare la somma e decretiamo chi ha vinto
 
-var scelta = prompt("Pari o dispari?");
 
-switch (scelta)
-{
-  case "pari":
-    scelta = "pari";
-    
-    break;
-  case "dispari":
-    scelta = "dispari";
-
-    break;
-
-  default:
-    break;
-}
-
+// richiamo funzione per scegliere pari o dispari
+var scelta = scegliPariDispari();
+console.log(scelta);
 
 // richiamo funzione per generare un numero random
 var computer = numeroRandom(1, 5);
@@ -34,6 +21,7 @@ var somma = sommaNumeri(utente, computer);
 console.log(somma);
 
 
+// controllo vincitore
 if (somma %2 == 0 && scelta == "pari")
 {
   alert("Hai vinto con pari")
@@ -42,15 +30,38 @@ else if (somma %2 !== 0 && scelta == "dispari")
 {
   alert("Hai vinto con dispari")
 }
-else if (somma %2 == 0 && scelta == "pari")
+
+else if (somma %2 !== 0 && scelta == "pari")
 {
   alert("Ha vinto il computer con dispari")
 }
-else if (somma %2 !== 0 && scelta == "dispari")
+else if (somma %2 == 0 && scelta == "dispari")
 {
   alert("Ha vinto il computer con pari")
 }
 
+// funzioni
+
+function scegliPariDispari()
+{
+  var scelta = prompt("Pari o dispari?");
+
+  switch (scelta)
+  {
+    case "pari":
+      scelta = "pari";
+      
+      break;
+    case "dispari":
+      scelta = "dispari";
+
+      break;
+
+    default:
+      break;
+  }
+  return scelta
+}
 
 // funzione per generare un numero random
 function numeroRandom(min, max)
