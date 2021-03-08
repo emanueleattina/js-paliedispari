@@ -3,15 +3,26 @@
 // il computer genera un random da 1 a 5
 // confrontare la somma e decretiamo chi ha vinto
 
-var numeroComputer;
-
-numeroComputer = numeroRandom();
-console.log(numeroRandom);
+// var scelta = prompt("Pari o dispari")
 
 function numeroRandom(min, max)
 {
-  var min = 1;
-  var max = 5
-  numeroComputer = Math.floor(Math.random() * max) + min;
+  var numeroComputer = Math.floor(Math.random() * max) + min;
   return numeroComputer;
 }
+
+var numeroCpu = numeroRandom(1, 5);
+console.log(numeroCpu);
+
+
+// ------------------------- //
+
+
+function sommaNumeri(n1, n2)
+{
+  var risultato = n1 + n2;
+  return risultato;
+}
+
+var somma = sommaNumeri(10, 20);
+console.log(somma);
