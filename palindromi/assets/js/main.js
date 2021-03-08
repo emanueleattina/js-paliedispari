@@ -4,13 +4,13 @@
 var parola = prompt("Scrivi una parola:")
 console.log(parola);
 
-function nomeFunzione(parola)
+function palindromo(parola)
 {
   var parolaReverse = parola.split("").reverse().join("");
   return parolaReverse;
 }
 
-var parolaReverse = nomeFunzione(parola);
+var parolaReverse = palindromo(parola);
 
 if(parola == parolaReverse)
 {

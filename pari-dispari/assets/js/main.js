@@ -3,26 +3,37 @@
 // il computer genera un random da 1 a 5
 // confrontare la somma e decretiamo chi ha vinto
 
-// var scelta = prompt("Pari o dispari")
-
 function numeroRandom(min, max)
 {
-  var numeroComputer = Math.floor(Math.random() * max) + min;
-  return numeroComputer;
+  var computer = Math.floor(Math.random() * max) + min;
+  return computer;
 }
 
-var numeroCpu = numeroRandom(1, 5);
-console.log(numeroCpu);
+var computer = numeroRandom(1, 5);
+console.log(computer);
 
 
-// ------------------------- //
-
-
-function sommaNumeri(n1, n2)
+function numeroUtente()
 {
-  var risultato = n1 + n2;
-  return risultato;
+  do
+  {
+    var utente = parseInt(prompt("Inserisci il tuo numero"));
+
+    if (utente < 5 || utente > 1)
+    {
+      alert("Il numero inserito non è compreso fra 1 e 5")
+    }
+  } while(utente > 5 || utente < 1)
+  return utente;
+}
+var utente = numeroUtente();
+console.log(utente);
+
+function sommaNumeri(utente, computer)
+{
+  var somma = utente + computer;
+  return somma;
 }
 
-var somma = sommaNumeri(10, 20);
-console.log(somma);
+var somma = sommaNumeri(utente, computer)
+ console.log(somma);
