@@ -26,9 +26,9 @@ function numeroUtente()
   {
     var utente = parseInt(prompt("Inserisci il tuo numero"));
 
-    if (utente < 5 || utente > 1)
+    if (utente > 5 || utente < 1)
     {
-      alert("Il numero inserito non è compreso fra 1 e 5")
+      alert("Il numero inserito non è compreso fra 1 e 5");
     }
   } while(utente > 5 || utente < 1);
   return utente;
