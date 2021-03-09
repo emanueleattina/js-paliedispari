@@ -24,20 +24,20 @@ console.log(somma);
 // controllo vincitore
 if (somma %2 == 0 && scelta == "pari")
 {
-  alert("Hai vinto con pari")
+  alert("Hai vinto con pari");
 }
 else if (somma %2 !== 0 && scelta == "dispari")
 {
-  alert("Hai vinto con dispari")
+  alert("Hai vinto con dispari");
 }
 
 else if (somma %2 !== 0 && scelta == "pari")
 {
-  alert("Ha vinto il computer con dispari")
+  alert("Ha vinto il computer con dispari");
 }
 else if (somma %2 == 0 && scelta == "dispari")
 {
-  alert("Ha vinto il computer con pari")
+  alert("Ha vinto il computer con pari");
 }
 
 // funzioni
